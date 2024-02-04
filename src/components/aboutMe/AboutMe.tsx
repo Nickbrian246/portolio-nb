@@ -1,11 +1,10 @@
 "use client";
 import useLanguageContext from "@/hooks/useLanguageContext/useLanguageContext";
-import Link from "next/link";
-import React from "react";
 import LinkButton from "../components/linkButton/LinkButton";
 
 export default function AboutMe() {
   const [isSpanish] = useLanguageContext();
+
   return (
     <section
       id="AboutMe"
@@ -44,7 +43,7 @@ export default function AboutMe() {
             target="_blank"
           >
             <span className=" font-medium tracking-wide text-white ">
-              {isSpanish ? "Ver Cv" : "View CV"}
+              {isSpanish ? "Ver CV" : "View CV"}
             </span>
           </LinkButton>
         </div>
