@@ -18,13 +18,9 @@ export default function ProductLayout({
       <section
         className="
       items-center
-      mt-11
       flex
       flex-col
-  w-full
-      m-auto
-      gap-5
-      p-1
+      w-full
       min-h-screen
       "
       >

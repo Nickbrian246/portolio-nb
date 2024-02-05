@@ -104,7 +104,10 @@ export default function ProjectPage() {
             ))}
           </ul>
         </section>
-        <section className="w-full flex flex-col gap-4 ">
+        <section className="max-w-7xl m-auto flex flex-col gap-4 ">
+          <h2 className="md:text-3xl text-xl my-10 text-center font-semibold text-sky-500">
+            {isSpanish ? "Enlaces " : "links"}
+          </h2>
           <div className="flex items-center gap-2">
             <span
               className={

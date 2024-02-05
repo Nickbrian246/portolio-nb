@@ -2,6 +2,8 @@
 import useLanguageContext from "@/hooks/useLanguageContext/useLanguageContext";
 import LinkButton from "../components/linkButton/LinkButton";
 
+import spanishCV from "../../../public/cv/NBJM-CV-ES.pdf";
+import englishCV from "../../../public/cv/NBJM-CV-EN.pdf";
 export default function AboutMe() {
   const [isSpanish] = useLanguageContext();
 
@@ -36,16 +38,25 @@ export default function AboutMe() {
             </p>
           </>
         )}
-        <div className="w-full p-2 px-4 flex justify-start mt-5">
-          <LinkButton
-            className="p-2  bg-sky-500 rounded-lg"
-            href={""}
+        <div className="w-full p-2 px-4 flex justify-start mt-5 gap-4">
+          <a
+            className="p-2  bg-red-500  rounded-lg"
+            href={isSpanish ? spanishCV : englishCV}
             target="_blank"
           >
             <span className=" font-medium tracking-wide text-white ">
               {isSpanish ? "Ver CV" : "View CV"}
             </span>
-          </LinkButton>
+          </a>
+          <a
+            className="p-2  bg-red-500 rounded-lg"
+            href={isSpanish ? spanishCV : englishCV}
+            download={"NBJM_FRONTEND_CV"}
+          >
+            <span className=" font-medium tracking-wide text-white ">
+              {isSpanish ? "Descargar CV" : "Download CV"}
+            </span>
+          </a>
         </div>
       </div>
     </section>
