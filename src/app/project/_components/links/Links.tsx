@@ -41,7 +41,7 @@ export default function Links({
         </p>
       </div>
       {linkToGitHub && (
-        <LinkButton
+        <a
           className="flex w-fit items-center gap-1 px-2 py-1 bg-black rounded-md text-white text-xl"
           target="_blank"
           href={linkToGitHub}
@@ -51,10 +51,10 @@ export default function Links({
             <AiFillGithub />
           </span>
           <p>GitHub</p>
-        </LinkButton>
+        </a>
       )}
       {linkToProject && (
-        <LinkButton
+        <a
           className="flex   w-fit items-center gap-1 px-2 py-1 bg-[#22c55e] rounded-md text-white text-xl"
           target="_blank"
           href={linkToProject}
@@ -64,7 +64,7 @@ export default function Links({
             <MdOutlineWeb />
           </span>
           <p>{isSpanish ? "Visitar proyecto" : " Visit project"}</p>
-        </LinkButton>
+        </a>
       )}
     </section>
   );

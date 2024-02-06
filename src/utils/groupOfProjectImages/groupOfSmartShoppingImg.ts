@@ -7,7 +7,7 @@ import checkPurchased from "@/assets/smart-shopping/checkPurchased.png";
 import ProductPage from "@/assets/smart-shopping/product.png";
 import shoppingCart from "@/assets/smart-shopping/shoppingCart.png";
 import register from "@/assets/smart-shopping/registerSmartShopping.png";
-import login from "@/assets/smart-shopping/registerSmartShopping.png";
+import login from "@/assets/smart-shopping/loginSmartShopping.png";
 import confirmPurchase from "@/assets/smart-shopping/confrimPurchaseSmartShopping.png";
 import { GroupOfProjectImages } from "@/interfaces/groupOfProjectImgs";
 

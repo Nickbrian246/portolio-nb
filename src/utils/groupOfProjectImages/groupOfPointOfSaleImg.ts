@@ -32,12 +32,6 @@ export const groupOfPointOfSaleImages: GroupOfProjectImages[] = [
   },
 
   {
-    name: "modalForAddProducts PointOfSale Image",
-    id: "12323dfas44",
-    imgSrc: modalForAddProducts,
-    description: "",
-  },
-  {
     name: "inventoryPageView PointOfSale Image",
     id: "12323dsdfas44",
     imgSrc: inventoryPageView,

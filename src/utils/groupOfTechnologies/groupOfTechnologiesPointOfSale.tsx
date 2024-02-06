@@ -133,6 +133,8 @@ export const pointOfSaleBackEnd: GroupOfTechnologies[] = [
 export const nestTodoBackEnd: GroupOfTechnologies[] = [
   { name: "MongoDB atlas ", icon: <SiMongodb />, iconColor: `#16a34a` },
   { name: "Mongoose ", icon: <SiMongoose />, iconColor: `#dc2626` },
+
+  { name: "Nest js", icon: <SiNestjs />, iconColor: ` #dc2626` },
   { name: "Node js", icon: <FaNodeJs />, iconColor: `#22c55e` },
   {
     name: "json Web Token (jwt)",

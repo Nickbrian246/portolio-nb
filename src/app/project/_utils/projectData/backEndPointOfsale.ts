@@ -1,6 +1,9 @@
 import { pointOfSaleGroupOfTechnologiesReact } from "@/utils/groupOfTechnologies/groupOfTechnologiesPointOfSale";
 import { Features, ProjectData } from "../../_interfaces/projectDataInterface";
-import { groupOfPointOfSaleImages } from "@/utils/groupOfProjectImages";
+import {
+  groupOfPointOfSaleImages,
+  expressProjectImg,
+} from "@/utils/groupOfProjectImages";
 import { v4 as uuidv4 } from "uuid";
 const poinOfSaleBackEndFeatures: Features[] = [
   {
@@ -43,7 +46,7 @@ export const poinOfSaleBackEndData: ProjectData = {
   technologiesTitleEn: "Technologies used in this project",
   technologiesTitleEs: "Tecnologías usadas en este proyecto",
   groupOfTechnologies: pointOfSaleGroupOfTechnologiesReact,
-  carouselImagesGroup: groupOfPointOfSaleImages,
+  carouselImagesGroup: expressProjectImg,
   isResponsive: false,
   linkToGitHub: "https://github.com/Nickbrian246/Farmacia_meneses_v1",
   linkToProject: "",
