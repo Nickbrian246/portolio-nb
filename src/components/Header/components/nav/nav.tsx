@@ -4,6 +4,7 @@ import React from "react";
 import { GrLanguage } from "react-icons/gr";
 import useLanguageContext from "@/hooks/useLanguageContext/useLanguageContext";
 import LanguageButton from "@/components/components/languageBtn/LanguageButton";
+import { HiOutlineComputerDesktop } from "react-icons/hi2";
 export default function Nav({
   handleOpenSideBar,
 }: {
@@ -13,6 +14,10 @@ export default function Nav({
 
   return (
     <nav className=" w-full justify-evenly  hidden md:flex">
+      <Link href={"/"} className="text-2xl  font-bold flex items-center gap-2">
+        NbDev Js
+        <HiOutlineComputerDesktop />
+      </Link>
       {optionsForHeader.map((option) => (
         <Link
           className="flex items-center gap-2 "

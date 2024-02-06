@@ -1,6 +1,6 @@
 import { GroupOfProjectImages } from "@/interfaces/groupOfProjectImgs";
 import { StaticImageData } from "next/image";
-interface GalleryImagesInterface {
+export interface GalleryImagesInterface {
   original: string;
   thumbnail: string;
 }

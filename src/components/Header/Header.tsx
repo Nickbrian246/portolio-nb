@@ -1,9 +1,10 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
-import MobileHeader from "./components/mobileHeader/MobileHeader";
-import Nav from "./components/nav/nav";
 import useLanguageContext from "@/hooks/useLanguageContext/useLanguageContext";
 import browserLanguage from "@/utils/utils/BrowserLanguage";
+import { useEffect, useState } from "react";
+import MobileHeader from "./components/mobileHeader/MobileHeader";
+import Nav from "./components/nav/nav";
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isSpanish, setIsSpanish] = useLanguageContext();

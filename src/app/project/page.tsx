@@ -1,10 +1,11 @@
-"use client";
-import React from "react";
-import { useSearchParams } from "next/navigation";
-import useLanguageContext from "@/hooks/useLanguageContext/useLanguageContext";
-import { AiFillGithub } from "react-icons/ai";
-import { MdOutlineWeb } from "react-icons/md";
-import ImageGallery from "react-image-gallery";
+import { Suspense } from "react";
+import type { Metadata, ResolvingMetadata } from "next";
+import Carousel from "./_components/corousel/Carousel";
+import Features from "./_components/features/Features";
+import Links from "./_components/links/Links";
+import Technologies from "./_components/technologies/Technologies";
+import { ProjectData } from "./_interfaces/projectDataInterface";
+import { adapterForGroupOfImageGallery } from "./_utils/adapter/adapterForGroupOfImageGallery";
 import {
   chatData,
   mercadoLibreData,
@@ -14,18 +15,29 @@ import {
   smartShoppingData,
   toDoBackendData,
 } from "./_utils/projectData";
-import { ProjectData } from "./_interfaces/projectDataInterface";
-import { adapterForGroupOfImageGallery } from "./_utils/adapter/adapterForGroupOfImageGallery";
-import { TbPointFilled } from "react-icons/tb";
-import LinkButton from "@/components/components/linkButton/LinkButton";
-import { BsPhoneFill } from "react-icons/bs";
-import { Suspense } from "react";
 import Loading from "./loading";
 
-export default function ProjectPage() {
-  const searchParams = useSearchParams();
-  const projectId = searchParams.get("projectid") ?? "";
-  const [isSpanish] = useLanguageContext();
+interface Props {
+  searchParams: string;
+}
+export async function generateMetadata({
+  searchParams,
+}: Props): Promise<Metadata> {
+  //@ts-ignore
+  const { projectid } = searchParams;
+
+  return {
+    title: projectid,
+  };
+}
+
+export default async function ProjectPage({
+  searchParams,
+}: {
+  searchParams: { projectid: string };
+}) {
+  const { projectid } = searchParams;
+  await generateMetadata({ searchParams: projectid });
   type ProjectNama =
     | "mercado-libre-clon-frontend"
     | "chat-frontend"
@@ -45,7 +57,7 @@ export default function ProjectPage() {
     "e-commerce-backend": smartShoppingBackEndData,
   };
   const projectSelected: ProjectData =
-    groupOfProjectData[projectId as ProjectNama];
+    groupOfProjectData[searchParams.projectid as ProjectNama];
   const adapterForGroupOfImages = adapterForGroupOfImageGallery(
     projectSelected.carouselImagesGroup
   );
@@ -54,113 +66,19 @@ export default function ProjectPage() {
     <>
       <Suspense fallback={<Loading />}>
         <section className="w-full  flex justify-center bg-[#eeeff3] ">
-          <div className="sm:max-w-7xl w-full p-4 ">
-            <ImageGallery items={adapterForGroupOfImages} />
-          </div>
+          <Carousel groupOfImages={adapterForGroupOfImages} />
         </section>
-        <section>
-          <h2 className="md:text-3xl text-xl my-10 text-center font-semibold text-sky-500">
-            {isSpanish
-              ? projectSelected.technologiesTitleEs
-              : projectSelected.technologiesTitleEn}
-          </h2>
-
-          <ul className="sm:max-w-7xl md:justify-start sm:justify-center justify-start  p-4 flex w-full flex-wrap gap-3 md:gap-6 md:h-[250px] h-fit">
-            {projectSelected.groupOfTechnologies.map((project) => (
-              <li className="flex items-center gap-1 h-fit" key={project.name}>
-                <span>
-                  <TbPointFilled />
-                </span>
-                <span
-                  style={{ color: project.iconColor }}
-                  className={`md:text-4xl text-xl`}
-                >
-                  {project.icon}
-                </span>
-                <p
-                  className={`md:text-2xl text-xl`}
-                  style={{ color: project.iconColor }}
-                >
-                  {project.name}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </section>
-        <section>
-          <h2 className="md:text-3xl text-xl my-10 text-center font-semibold text-sky-500">
-            {isSpanish ? "Características" : "Characteristics"}
-          </h2>
-          <ul>
-            {projectSelected.features.map((feature) => (
-              <li className="flex items-baseline gap-2" key={feature.id}>
-                <span>
-                  <TbPointFilled />
-                </span>
-                <p className="md:text-xl font-medium">
-                  {isSpanish ? feature.nameES : feature.nameEn}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </section>
-        <section className="max-w-7xl m-auto flex flex-col gap-4 ">
-          <h2 className="md:text-3xl text-xl my-10 text-center font-semibold text-sky-500">
-            {isSpanish ? "Enlaces " : "links"}
-          </h2>
-          <div className="flex items-center gap-2">
-            <span
-              className={
-                projectSelected.isResponsive
-                  ? "text-green-400 text-xl"
-                  : "text-red-500 text-xl"
-              }
-            >
-              <BsPhoneFill />
-            </span>
-            <p
-              className={
-                projectSelected.isResponsive
-                  ? "text-green-400 "
-                  : "text-red-500 "
-              }
-            >
-              {projectSelected.isResponsive
-                ? isSpanish
-                  ? "Es adaptable a dispositivos mobiles (Responsive)"
-                  : "It is mobile responsive"
-                : isSpanish
-                ? "No es adaptable a dispositivos mobiles (Responsive)"
-                : "It is not mobile responsive"}
-            </p>
-          </div>
-          {projectSelected.linkToGitHub && (
-            <LinkButton
-              className="flex w-fit items-center gap-1 px-2 py-1 bg-black rounded-md text-white text-xl"
-              target="_blank"
-              href={projectSelected.linkToGitHub}
-            >
-              <span>
-                {" "}
-                <AiFillGithub />
-              </span>
-              <p>GitHub</p>
-            </LinkButton>
-          )}
-          {projectSelected.linkToProject && (
-            <LinkButton
-              className="flex   w-fit items-center gap-1 px-2 py-1 bg-[#22c55e] rounded-md text-white text-xl"
-              target="_blank"
-              href={projectSelected.linkToProject}
-            >
-              <span>
-                {" "}
-                <MdOutlineWeb />
-              </span>
-              <p>{isSpanish ? "Visitar proyecto" : " Visit project"}</p>
-            </LinkButton>
-          )}
-        </section>
+        <Technologies
+          groupOfTechnologies={projectSelected.groupOfTechnologies}
+          technologiesTitleEn={projectSelected.technologiesTitleEn}
+          technologiesTitleEs={projectSelected.technologiesTitleEs}
+        />
+        <Features features={projectSelected.features} />
+        <Links
+          isResponsive={projectSelected.isResponsive}
+          linkToGitHub={projectSelected.linkToGitHub}
+          linkToProject={projectSelected.linkToProject}
+        />
       </Suspense>
     </>
   );

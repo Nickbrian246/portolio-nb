@@ -5,6 +5,7 @@ import { FaCheckCircle, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
 import { FaCircleUser } from "react-icons/fa6";
 import { FiUser } from "react-icons/fi";
 import { IoLogoCss3, IoTriangle } from "react-icons/io5";
+import { SiVite } from "react-icons/si";
 import {
   SiExpress,
   SiJavascript,
@@ -27,6 +28,7 @@ export const pointOfSaleGroupOfTechnologiesReact: GroupOfTechnologies[] = [
   { name: "Html", icon: <FaHtml5 />, iconColor: `#fbbf24` },
   { name: "Css", icon: <IoLogoCss3 />, iconColor: `#0ea5e9` },
   { name: "Material UI", icon: <SiMui />, iconColor: `#0ea5e9` },
+  { name: "Vite", icon: <SiVite />, iconColor: `#f59e0b` },
   { name: "React", icon: <FaReact />, iconColor: `#22d3ee` },
   { name: "React Redux", icon: <TbBrandRedux />, iconColor: `#6366f1` },
   {
@@ -131,6 +133,7 @@ export const pointOfSaleBackEnd: GroupOfTechnologies[] = [
 export const nestTodoBackEnd: GroupOfTechnologies[] = [
   { name: "MongoDB atlas ", icon: <SiMongodb />, iconColor: `#16a34a` },
   { name: "Mongoose ", icon: <SiMongoose />, iconColor: `#dc2626` },
+  { name: "Node js", icon: <FaNodeJs />, iconColor: `#22c55e` },
   {
     name: "json Web Token (jwt)",
     icon: <SiJsonwebtokens />,
