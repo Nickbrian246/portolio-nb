@@ -3,7 +3,10 @@ import React from "react";
 import useLanguageContext from "@/hooks/useLanguageContext/useLanguageContext";
 import { GrLanguage } from "react-icons/gr";
 import { saveSelectedLanguage } from "@/utils/localStorage/saveSelectedLanguage";
-export default function LanguageButton() {
+interface Props {
+  handleOpenSideBar?: () => void;
+}
+export default function LanguageButton({ handleOpenSideBar }: Props) {
   const [isSpanish, setIsSpanish] = useLanguageContext();
   const handleLanguageClick = () => {
     setIsSpanish((prev) => {
@@ -14,6 +17,9 @@ export default function LanguageButton() {
       }
       return !prev;
     });
+    if (handleOpenSideBar) {
+      handleOpenSideBar();
+    }
   };
 
   return (

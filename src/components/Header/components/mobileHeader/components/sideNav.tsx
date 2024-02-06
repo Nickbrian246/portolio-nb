@@ -45,7 +45,7 @@ export default function SideNav({
           </p>
         </Link>
       ))}
-      <LanguageButton />
+      <LanguageButton handleOpenSideBar={handleOpenSideBar} />
     </nav>
   );
 }

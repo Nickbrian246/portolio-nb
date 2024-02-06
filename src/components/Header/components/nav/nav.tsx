@@ -30,7 +30,7 @@ export default function Nav({
           </p>
         </Link>
       ))}
-      <LanguageButton />
+      <LanguageButton handleOpenSideBar={handleOpenSideBar} />
     </nav>
   );
 }
