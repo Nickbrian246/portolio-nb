@@ -94,6 +94,11 @@ export const smartShoppingECommerceNextJs: GroupOfTechnologies[] = [
     iconColor: `#0ea5e9`,
   },
   {
+    name: " Twilio SendGrid",
+    icon: <CiMail />,
+    iconColor: `#0ea5e9`,
+  },
+  {
     name: "Passport",
     icon: <SiPassport />,
     iconColor: `#4ade80`,
@@ -158,6 +163,11 @@ export const smartShoppingBackEnd: GroupOfTechnologies[] = [
   { name: "Nest js", icon: <SiNestjs />, iconColor: ` #dc2626` },
   {
     name: " Nodemailer",
+    icon: <CiMail />,
+    iconColor: `#0ea5e9`,
+  },
+  {
+    name: " Twilio SendGrid",
     icon: <CiMail />,
     iconColor: `#0ea5e9`,
   },

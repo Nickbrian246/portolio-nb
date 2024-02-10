@@ -41,9 +41,10 @@ const smartShoppingFeatures: Features[] = [
     id: uuidv4(),
   },
   {
-    nameEn: "Receive an email with a summary of the purchased products ***.",
+    nameEn:
+      "Receive an email with a summary of the purchased products (only for interview)*.",
     nameES:
-      "Recibe un Correo electrónico con un resumen de los productos comprados ***.",
+      "Recibir un correo electrónico con un resumen de los productos comprados (solo para entrevista)*.",
     id: uuidv4(),
   },
 ];
