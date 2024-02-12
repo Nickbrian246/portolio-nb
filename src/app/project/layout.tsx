@@ -1,6 +1,5 @@
 import Header from "./_components/header/Header";
 import Footer from "@/components/Footer/Footer";
-import { Metadata } from "next";
 
 export default function ProductLayout({
   children,

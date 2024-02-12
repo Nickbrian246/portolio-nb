@@ -1,10 +1,8 @@
 "use client";
-import LinkButton from "@/components/components/linkButton/LinkButton";
-import React from "react";
+import useLanguageContext from "@/hooks/useLanguageContext/useLanguageContext";
 import { AiFillGithub } from "react-icons/ai";
 import { BsPhoneFill } from "react-icons/bs";
 import { MdOutlineWeb } from "react-icons/md";
-import useLanguageContext from "@/hooks/useLanguageContext/useLanguageContext";
 import { ProjectData } from "../../_interfaces/projectDataInterface";
 interface Props
   extends Pick<
