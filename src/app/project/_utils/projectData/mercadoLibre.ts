@@ -48,6 +48,6 @@ export const mercadoLibreData: ProjectData = {
   carouselImagesGroup: groupOfMercadoLibreImages,
   isResponsive: false,
   linkToGitHub: "https://github.com/Nickbrian246/mercado-libre-clon",
-  linkToProject: "",
+  linkToProject: "https://mercado-shopping.nbjdev.com/",
   features: mercadoLibreFeatures,
 };
