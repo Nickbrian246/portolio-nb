@@ -3,8 +3,8 @@ import { ProjectButtonList } from "../../utils/projectsButtonsList/projectButton
 import LinkButton from "@/components/components/linkButton/LinkButton";
 export default function ProjectButtons() {
   return (
-    <nav className="flex justify-between max-w-3xl m-auto mt-2 ">
-      <ul>
+    <nav className=" max-w-3xl m-auto mt-2 ">
+      <ul className="flex justify-between">
         {ProjectButtonList.map((button) => (
           <li key={button.title}>
             <LinkButton
