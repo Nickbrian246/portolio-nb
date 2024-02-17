@@ -7,6 +7,7 @@ import {
 } from "@/utils/groupOfProjects/groupOfProjects";
 import Divider from "../components/Divider";
 import ProjectCard from "./components/ProjectCard/ProjectCard";
+import ProjectButtons from "./components/button/ProjectButtons";
 export default function Projects() {
   const [isSpanish] = useLanguageContext();
 
@@ -15,8 +16,12 @@ export default function Projects() {
       <h2 className="text-center font-semibold text-2xl text-sky-700">
         {isSpanish ? "Proyectos" : "Projects"}
       </h2>
+      <ProjectButtons />
       <Divider className="my-6 bg-sky-500" />
-      <h2 className=" text-center text-2xl font-bold text-blue-500 my-5">
+      <h2
+        className=" text-center text-2xl font-bold text-blue-500 my-5"
+        id="FullStack"
+      >
         FullStack
       </h2>
 
@@ -38,7 +43,10 @@ export default function Projects() {
         ))}
       </section>
       <Divider className="my-6 bg-blue-500" />
-      <h2 className=" text-center text-2xl font-bold text-blue-500 my-5">
+      <h2
+        className=" text-center text-2xl font-bold text-blue-500 my-5"
+        id="frontEnd"
+      >
         FrontEnd
       </h2>
 
@@ -60,7 +68,10 @@ export default function Projects() {
         ))}
       </section>
       <Divider className="my-6 bg-red-500" />
-      <h2 className=" text-center text-2xl font-bold text-red-500 my-5">
+      <h2
+        className=" text-center text-2xl font-bold text-red-500 my-5"
+        id="BackEnd"
+      >
         BackEnd
       </h2>
 

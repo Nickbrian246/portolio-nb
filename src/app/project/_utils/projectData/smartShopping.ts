@@ -8,6 +8,11 @@ const smartShoppingFeatures: Features[] = [
   { nameES: "Login de usuarios", nameEn: "Users Login", id: uuidv4() },
   { nameES: "Registro de usuarios", nameEn: "User registration", id: uuidv4() },
   {
+    nameES: "Login  con Google o Facebook",
+    nameEn: "Users can log in using their Google or Facebook accounts.",
+    id: uuidv4(),
+  },
+  {
     nameES: "Cambia o actualiza contraseña",
     nameEn: "Change or update password.",
     id: uuidv4(),

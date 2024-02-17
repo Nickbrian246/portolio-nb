@@ -10,7 +10,7 @@ export default function AboutMe() {
   return (
     <section
       id="AboutMe"
-      className="h-screen w-full bg-[#eeeff3]  flex flex-col items-center justify-center gap-4 p-2"
+      className="h-[70vh] w-full bg-[#eeeff3]  flex flex-col items-center justify-center gap-4 p-2"
     >
       <div className="max-w-4xl">
         {isSpanish ? (
