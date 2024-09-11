@@ -7,6 +7,7 @@ import {
   pointOfSaleBackEnd,
   nestTodoBackEnd,
   smartShoppingBackEnd,
+  collectionBackendTechnologies,
   collectionTechnologies,
 } from "../groupOfTechnologies/groupOfTechnologiesPointOfSale";
 import homeImgMercadoLibreClon from "../../assets/mercadoLibreClon/home1.webp";
@@ -97,6 +98,48 @@ export const groupOfFullStackProjects: ProjectCard[] = [
 ];
 export const groupOfBackEndProjects: ProjectCard[] = [
   {
+    titleEn: "E-Commerce (Smart shopping)",
+    titleEs: "E-Commerce (Smart shopping)",
+    descriptionEn: `
+    This project is primarily based on CRUD operations (Create, Read, Update, Delete) across most of its routes, allowing you to efficiently manage and manipulate data. Some key functionalities include: Login, Registration, Password Change, Shopping Cart, Order Registration.
+    `,
+    descriptionEs: `
+    Este proyecto se basa principalmente en operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en la mayoría de sus rutas, permitiéndote gestionar y manipular datos de manera eficiente. Algunas de las funciones clave incluyen: Inicio de Sesión, Registro, Cambio de Contraseña, Carrito de Compras, Registro de Pedidos.
+  `,
+    id: "e-commerce-backend",
+    presentationImgSrc: NestImg,
+    technologiesTitleEn: "Technologies used in this project",
+    technologiesTitleEs: "Tecnologías usadas en este proyecto",
+    groupOfTechnologies: smartShoppingBackEnd,
+  },
+  {
+    titleEn: "Collections ",
+    titleEs: "Colecciones ",
+    descriptionEn: `
+    In this project, 
+    you have the freedom to create personalized collections by defining customizable fields of different types: 
+    numeric, dates, text, or checkboxes, 
+    and add items to the collections using those fields. 
+    The platform allows commenting in real time and instantly receiving comments from other users viewing the same item, 
+    as well as giving 'likes.'
+    If you're an administrator, you can also block users, delete them, change roles,
+    and download the list of users with their current status.
+    `,
+    descriptionEs: `
+    En este proyecto, tienes la libertad de crear colecciones personalizadas definiendo campos customizables de diferentes 
+    tipos: numéricos, fechas, textos, o checkboxes y agregar elementos a las colecciones usando esos campos. 
+    La plataforma permite comentar en tiempo real y recibir instantáneamente los comentarios de otros usuarios que estén 
+    visualizando el mismo elemento, así como dar 'me gusta'. 
+    Además
+    Si eres administrador, también podrás bloquear usuarios, eliminarlos, cambiar roles y descargar la lista de usuarios con su estado actual.
+  `,
+    id: "Collections-backend",
+    presentationImgSrc: NestImg,
+    technologiesTitleEn: "Technologies used in this project",
+    technologiesTitleEs: "Tecnologías usadas en este proyecto",
+    groupOfTechnologies: collectionBackendTechnologies,
+  },
+  {
     titleEn: "Point of sale ",
     titleEs: "Punto de venta ",
     descriptionEn: `
@@ -124,20 +167,5 @@ export const groupOfBackEndProjects: ProjectCard[] = [
     technologiesTitleEn: "Technologies used in this project",
     technologiesTitleEs: "Tecnologías usadas en este proyecto",
     groupOfTechnologies: nestTodoBackEnd,
-  },
-  {
-    titleEn: "E-Commerce (Smart shopping)",
-    titleEs: "E-Commerce (Smart shopping)",
-    descriptionEn: `
-    This project is primarily based on CRUD operations (Create, Read, Update, Delete) across most of its routes, allowing you to efficiently manage and manipulate data. Some key functionalities include: Login, Registration, Password Change, Shopping Cart, Order Registration.
-    `,
-    descriptionEs: `
-    Este proyecto se basa principalmente en operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en la mayoría de sus rutas, permitiéndote gestionar y manipular datos de manera eficiente. Algunas de las funciones clave incluyen: Inicio de Sesión, Registro, Cambio de Contraseña, Carrito de Compras, Registro de Pedidos.
-`,
-    id: "e-commerce-backend",
-    presentationImgSrc: NestImg,
-    technologiesTitleEn: "Technologies used in this project",
-    technologiesTitleEs: "Tecnologías usadas en este proyecto",
-    groupOfTechnologies: smartShoppingBackEnd,
   },
 ];
