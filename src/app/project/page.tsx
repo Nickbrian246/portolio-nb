@@ -17,6 +17,7 @@ import {
   collectionData,
 } from "./_utils/projectData";
 import Loading from "./loading";
+import { collectionBackendData } from "./_utils/projectData/backEndCollection";
 
 interface Props {
   searchParams: string;
@@ -57,6 +58,7 @@ export default async function ProjectPage({
     "todo-backend": toDoBackendData,
     "e-commerce-backend": smartShoppingBackEndData,
     "Collections-fullstack": collectionData,
+    "Collections-backend": collectionBackendData,
   };
   const projectSelected: ProjectData =
     groupOfProjectData[searchParams.projectid as ProjectNama];

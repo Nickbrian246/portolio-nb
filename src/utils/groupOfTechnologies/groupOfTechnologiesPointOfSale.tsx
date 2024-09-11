@@ -156,7 +156,6 @@ export const collectionTechnologies: GroupOfTechnologies[] = [
     iconColor: `#8b5cf6`,
   },
   { name: "MongoDB atlas ", icon: <SiMongodb />, iconColor: `#16a34a` },
-  { name: "Mongoose ", icon: <SiMongoose />, iconColor: `#dc2626` },
   {
     name: "json Web Token (jwt)",
     icon: <SiJsonwebtokens />,
@@ -230,6 +229,38 @@ export const smartShoppingBackEnd: GroupOfTechnologies[] = [
   },
   { name: "MongoDB atlas ", icon: <SiMongodb />, iconColor: `#16a34a` },
   { name: "Mongoose ", icon: <SiMongoose />, iconColor: `#dc2626` },
+  {
+    name: "json Web Token (jwt)",
+    icon: <SiJsonwebtokens />,
+    iconColor: `#6366f1`,
+  },
+];
+
+export const collectionBackendTechnologies: GroupOfTechnologies[] = [
+  { name: "Node js", icon: <FaNodeJs />, iconColor: `#22c55e` },
+  { name: "Nest js", icon: <SiNestjs />, iconColor: ` #dc2626` },
+  {
+    name: "Prisma",
+    icon: <SiPrisma />,
+    iconColor: `#0ea5e9`,
+  },
+  {
+    name: "Socket io",
+    icon: <SiSocketdotio />,
+    iconColor: `#0ea5e9`,
+  },
+  {
+    name: "Passport",
+    icon: <SiPassport />,
+    iconColor: `#4ade80`,
+  },
+  {
+    name: "bcrypt",
+    icon: <TbPassword />,
+    iconColor: `#8b5cf6`,
+  },
+  { name: "MongoDB atlas ", icon: <SiMongodb />, iconColor: `#16a34a` },
+
   {
     name: "json Web Token (jwt)",
     icon: <SiJsonwebtokens />,
