@@ -7,11 +7,13 @@ import {
   pointOfSaleBackEnd,
   nestTodoBackEnd,
   smartShoppingBackEnd,
+  collectionTechnologies,
 } from "../groupOfTechnologies/groupOfTechnologiesPointOfSale";
 import homeImgMercadoLibreClon from "../../assets/mercadoLibreClon/home1.webp";
 import pointOfSaleImg from "../../assets/pointOfSale/home.png";
 import smartShoppingImg from "@/assets/smart-shopping/home.png";
 import chatNextjs from "@/assets/chat/chatting.png";
+import feed from "@/assets/collections/feed1.png";
 import NestImg from "@/assets/backEndImages/nest js.jpg";
 import ExpressImg from "@/assets/backEndImages/express 2 image.png";
 export const groupOfFrontEndProjects: ProjectCard[] = [
@@ -61,6 +63,21 @@ export const groupOfFullStackProjects: ProjectCard[] = [
     technologiesTitleEn: "Technologies used in this project",
     technologiesTitleEs: "Tecnologías usadas en este proyecto",
     groupOfTechnologies: smartShoppingECommerceNextJs,
+  },
+  {
+    titleEn: "Collections ",
+    titleEs: "Colecciones ",
+    descriptionEn: `
+    In this project, you have the freedom to create personalized collections by defining customizable fields of different types: numeric, dates, text, or checkboxes, and add items to the collections using those fields. The platform allows commenting in real time and instantly receiving comments from other users viewing the same item, as well as giving 'likes.' Additionally, you can download your own collections in CSV format. If you're an administrator, you can also block users, delete them, change roles, and download the list of users with their current status.
+    `,
+    descriptionEs: `
+    En este proyecto, tienes la libertad de crear colecciones personalizadas definiendo campos customizables de diferentes tipos: numéricos, fechas, textos, o checkboxes y agregar elementos a las colecciones usando esos campos.La plataforma permite comentar en tiempo real y recibir instantáneamente los comentarios de otros usuarios que estén visualizando el mismo elemento, así como dar 'me gusta'. Además, puedes descargar tus propias colecciones en formato CSV. Si eres administrador, también podrás bloquear usuarios, eliminarlos, cambiar roles y descargar la lista de usuarios con su estado actual.
+`,
+    id: "Collections-fullstack",
+    presentationImgSrc: feed,
+    technologiesTitleEn: "Technologies used in this project",
+    technologiesTitleEs: "Tecnologías usadas en este proyecto",
+    groupOfTechnologies: collectionTechnologies,
   },
   {
     titleEn: "Point of sale ",

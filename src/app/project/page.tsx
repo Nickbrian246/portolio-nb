@@ -14,6 +14,7 @@ import {
   smartShoppingBackEndData,
   smartShoppingData,
   toDoBackendData,
+  collectionData,
 } from "./_utils/projectData";
 import Loading from "./loading";
 
@@ -55,6 +56,7 @@ export default async function ProjectPage({
     "Pointofsale-backend": poinOfSaleBackEndData,
     "todo-backend": toDoBackendData,
     "e-commerce-backend": smartShoppingBackEndData,
+    "Collections-fullstack": collectionData,
   };
   const projectSelected: ProjectData =
     groupOfProjectData[searchParams.projectid as ProjectNama];

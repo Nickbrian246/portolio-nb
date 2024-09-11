@@ -6,6 +6,10 @@ import { FaCircleUser } from "react-icons/fa6";
 import { FiUser } from "react-icons/fi";
 import { IoLogoCss3, IoTriangle } from "react-icons/io5";
 import { SiVite } from "react-icons/si";
+import { SiPrisma } from "react-icons/si";
+import { BsFiletypeCsv } from "react-icons/bs";
+import { SiSocketdotio } from "react-icons/si";
+import { TbPassword } from "react-icons/tb";
 import {
   SiExpress,
   SiJavascript,
@@ -106,6 +110,49 @@ export const smartShoppingECommerceNextJs: GroupOfTechnologies[] = [
   {
     name: "Argon2",
     icon: <IoTriangle />,
+    iconColor: `#8b5cf6`,
+  },
+  { name: "MongoDB atlas ", icon: <SiMongodb />, iconColor: `#16a34a` },
+  { name: "Mongoose ", icon: <SiMongoose />, iconColor: `#dc2626` },
+  {
+    name: "json Web Token (jwt)",
+    icon: <SiJsonwebtokens />,
+    iconColor: `#6366f1`,
+  },
+];
+export const collectionTechnologies: GroupOfTechnologies[] = [
+  { name: "Typescript", icon: <SiTypescript />, iconColor: `#0ea5e9` },
+  { name: "Html", icon: <FaHtml5 />, iconColor: `#fbbf24` },
+  { name: "Css", icon: <IoLogoCss3 />, iconColor: `#0ea5e9` },
+  { name: "Material UI", icon: <SiMui />, iconColor: `#0ea5e9` },
+  { name: "Next js", icon: <SiNextdotjs />, iconColor: `#020617` },
+  { name: "React Redux", icon: <TbBrandRedux />, iconColor: `#6366f1` },
+
+  { name: "Node js", icon: <FaNodeJs />, iconColor: `#22c55e` },
+  { name: "Nest js", icon: <SiNestjs />, iconColor: ` #dc2626` },
+  {
+    name: "Prisma",
+    icon: <SiPrisma />,
+    iconColor: `#0ea5e9`,
+  },
+  {
+    name: "CSV",
+    icon: <BsFiletypeCsv />,
+    iconColor: `#16a34a`,
+  },
+  {
+    name: "Socket io",
+    icon: <SiSocketdotio />,
+    iconColor: `#0ea5e9`,
+  },
+  {
+    name: "Passport",
+    icon: <SiPassport />,
+    iconColor: `#4ade80`,
+  },
+  {
+    name: "bcrypt",
+    icon: <TbPassword />,
     iconColor: `#8b5cf6`,
   },
   { name: "MongoDB atlas ", icon: <SiMongodb />, iconColor: `#16a34a` },
